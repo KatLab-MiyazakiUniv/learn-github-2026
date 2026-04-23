@@ -14,11 +14,17 @@ Atm::Atm(int init_balance)
 
 void Atm::deposit(int amount)
 {
+      if(amount <= 0){
+            return;
+      }
       balance += amount;
 }
 
 void Atm::withdraw(int amount)
 {
+      if(amount <= 0 || amount > balance){
+            return;
+      }
       balance -= amount;
 }
 
