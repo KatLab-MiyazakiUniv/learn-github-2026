@@ -6,6 +6,8 @@
 #include <gtest/gtest.h>
 #include "Atm.h"
 
+namespace etrobocon2026_learn{
+
 // 正の数の残高テスト
 TEST(AtmBalanceTest, PlusBalance)
 {
@@ -100,4 +102,5 @@ TEST(AtmWithdrawTest, WithdrawNegativeAmount)
     atm.withdraw(-50);
     int expected = 100;
     EXPECT_EQ(atm.getBalance(), expected);
+}
 }
